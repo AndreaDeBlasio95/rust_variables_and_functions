@@ -1,6 +1,6 @@
-# Rust Variables Deep Dive
+# Rust Variables & Functions Getting Started!
 
-Welcome to the Rust Variables Deep Dive repository! This project is dedicated to those who are eager to learn and enhance their understanding of the Rust programming language, focusing specifically on variables, data types, functions, and control flow.
+Welcome to the Rust Variables & Functions Getting Started repository! This project is dedicated to those who are eager to learn and enhance their understanding of the Rust programming language, focusing specifically on variables, data types, functions, and control flow.
 
 ## About Rust
 

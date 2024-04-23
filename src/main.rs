@@ -33,9 +33,11 @@ fn main() {
     // integers 8-bit, 16-bit, 32-bit, 64-bit -> i8, u8, i16, u16, ...
     let scalar_integer: u32 = 5; // unsigned integer
     let scalar_signed_integer: i32 = -5; // signed integer
+    println!("The value of scalar_integer is: {}, scalar_signed_integer is: {}", scalar_integer, scalar_signed_integer);
 
     // f32, f64
     let scalar_float: f64 = 5.0; // float
+    println!("The value of scalar_float is: {}", scalar_float);
 
     // numeric operation ---
     // addition
@@ -53,6 +55,7 @@ fn main() {
     // -----------------------
 
     let scalar_bool: bool = true; // boolean
+    println!("boolean value is: {}", scalar_bool);
 
     let scalar_char: char = 'A'; // character specified with single quotes, string specified with double quotes
     let c = 'z';
@@ -67,7 +70,7 @@ fn main() {
     println!("The value of tup is: {:?}", tup);
     // destructuring tuple
     let (x, y, z) = tup;
-    println!("The value of x is: {}", x);
+    println!("The value of x is: {}, y is: {}, z is: {}", x, y, z);
     // access tuple element by index
     let five_hundred = tup.0;
     println!("The value of x is: {}", five_hundred);
@@ -78,7 +81,27 @@ fn main() {
     let second = arr[1];
     println!("The value of first is: {}, second is: {}", first, second);
 
+    another_function();
+    another_function_with_parameter(5);
+    another_function_with_two_parameters(5, 6); 
     
+    let my_x = another_function_with_return_type();
+    println!("The value of my_x is: {}", my_x);
 
+}
 
+fn another_function() {
+    println!("Another function.");
+}
+
+fn another_function_with_parameter(x: i32) {
+    println!("The value of x is: {}", x);
+}
+
+fn another_function_with_two_parameters(x: i32, y: i32) {
+    println!("The value of x is: {}, y is: {}", x, y);
+}
+
+fn another_function_with_return_type() -> i32 {
+    5
 }

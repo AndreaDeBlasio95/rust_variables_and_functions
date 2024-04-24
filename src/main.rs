@@ -1,3 +1,5 @@
+// CHAPTER 1: Variables, Data Types, Functions, Control Flow, Loops, Comments
+
 fn main() {
     // immutable variable
     let x= 5;

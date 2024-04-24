@@ -98,7 +98,19 @@ fn main() {
     control_flow_topic();
 
     // Loops
-    loops_topic();
+    //loops_infinite_topic();
+
+    // while loop
+    loop_with_while();
+
+    // looping through a collection
+    loop_a_collection();
+
+    // looping through a collection using for
+    loop_a_collection_using_for();
+
+    // looping through for reverse
+    loop_a_collection_using_for_reverse();
 
 }
 
@@ -144,8 +156,55 @@ fn control_flow_topic () {
     println!("The value of my_number is: {}", my_number);
 }
 
-fn loops_topic () {
+/*
+fn loops_infinite_topic () {
     loop {
         println!("Infinite loop - Stop killing the terminal or with CTRL-C");
     }
+}
+*/
+
+fn loop_with_while () {
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{}!", number);
+
+        number = number - 1;
+    }
+
+    println!("End of while loop");
+}
+
+fn loop_a_collection () {
+    println!("Looping through a collection using while loop");
+    let a = [10, 20, 30, 40, 50];
+    let mut index = 0;
+
+    while index < 5 {
+        println!("The value is: {}", a[index]);
+
+        index = index + 1;
+    }
+}
+
+fn loop_a_collection_using_for () {
+    println!("Looping through a collection using for loop");
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a.iter() {
+        println!("The value is: {}", element);
+    }
+}
+
+fn loop_a_collection_using_for_reverse () {
+    println!("Looping through a collection using for loop in reverse");
+    let a = [10, 20, 30, 40, 50];
+
+    for number in (1..4).rev() {
+        println!("The value is: {}", a[number]);
+    }
+    // output: 40, 30, 20
+    // the whole size of the array is 5, but the range is 1..4, so it will only print 3 elements
+    // to print all elements, change the range to 0..5
 }

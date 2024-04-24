@@ -81,12 +81,24 @@ fn main() {
     let second = arr[1];
     println!("The value of first is: {}, second is: {}", first, second);
 
+    // Functions
     another_function();
-    another_function_with_parameter(5);
-    another_function_with_two_parameters(5, 6); 
     
-    let my_x = another_function_with_return_type();
+    function_with_parameter(5);
+    
+    function_with_two_parameters(5, 6); 
+    
+    let my_x = function_with_return_type();
     println!("The value of my_x is: {}", my_x);
+
+    let x_plus_one = plus_one(5);
+    println!("The value of x_plus_one is: {}", x_plus_one);
+
+    // Control Flow
+    control_flow_topic();
+
+    // Loops
+    loops_topic();
 
 }
 
@@ -94,14 +106,46 @@ fn another_function() {
     println!("Another function.");
 }
 
-fn another_function_with_parameter(x: i32) {
+fn function_with_parameter(x: i32) {
     println!("The value of x is: {}", x);
 }
 
-fn another_function_with_two_parameters(x: i32, y: i32) {
+fn function_with_two_parameters(x: i32, y: i32) {
     println!("The value of x is: {}, y is: {}", x, y);
 }
 
-fn another_function_with_return_type() -> i32 {
+fn function_with_return_type() -> i32 {
     5
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
+}
+
+fn control_flow_topic () {
+
+    let number = 6;
+
+    if number % 4 == 0 {
+        println!("divisible by 4");
+    } else if number % 3 == 0 {
+        println!("divisible by 3");
+    } else {
+        println!("not divisible by 4 or 3");
+    }
+
+    // using if in a let statement
+    let condition = true;
+    let my_number = if condition {
+        5
+    } else {
+        6
+    };
+    println!("The value of my_number is: {}", my_number);
+}
+
+fn loops_topic () {
+    loop {
+        println!("Infinite loop - Stop killing the terminal or with CTRL-C");
+    }
 }
